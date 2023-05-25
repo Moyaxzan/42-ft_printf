@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include "./include/ft_printf.h"
+#define INT_MAX 2147483647
+#define INT_MIN -2147483648
+#define LONG_MAX 2147483647
+#define LONG_MIN -2147483648
+#define ULONG_MAX 4294967295
 
 int main(void)
 {
@@ -53,4 +58,7 @@ int main(void)
 	ft_printf("size = %d", printf("real %x",4294967296));
 	fflush(stdout);
 	ft_printf("size = %d\n", ft_printf("mine %x",4294967296));
+	printf(" %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	fflush(stdout);
+	ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 }

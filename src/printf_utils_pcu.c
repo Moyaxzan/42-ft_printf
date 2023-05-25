@@ -6,7 +6,7 @@
 /*   By: tsaint-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:48:06 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/05/24 19:03:01 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:58:03 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,17 @@ int	print_hex(unsigned long hex, char *base)
 {
 	int		nb_char_written;
 	int		len_nb;
+	unsigned long	hexa;
 	char	res[20];
 
 	len_nb = 0;
-	if (!hex)
+	hexa = (unsigned int) hex;
+	if (!hexa)
 		return (write(1, "0", 1));
-	while (hex)
+	while (hexa)
 	{
-		res[len_nb] = base[hex % 16];
-		hex = hex / 16;
+		res[len_nb] = base[hexa % 16];
+		hexa = hexa / 16;
 		len_nb++;
 	}
 	nb_char_written = len_nb;
