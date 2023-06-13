@@ -60,5 +60,9 @@ int main(void)
 	ft_printf("size = %d\n", ft_printf("mine %x",4294967296));
 	printf(" %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	fflush(stdout);
-	ft_printf(" %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	ft_printf(" %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	
+	printf("%d\n", printf(NULL));
+	fflush(stdout);
+	printf("%d\n", ft_printf(NULL));
 }
