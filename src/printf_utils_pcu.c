@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf_utils_pcu.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsaint-p <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:48:06 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/05/25 14:58:03 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/07/17 12:08:58 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ int	print_pointer(unsigned long add_int)
 
 int	print_hex(unsigned long hex, char *base)
 {
-	int		nb_char_written;
-	int		len_nb;
+	int				nb_char_written;
+	int				len_nb;
 	unsigned long	hexa;
-	char	res[20];
+	char			res[20];
 
 	len_nb = 0;
 	hexa = (unsigned int) hex;
