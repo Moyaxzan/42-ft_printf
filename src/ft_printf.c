@@ -6,16 +6,17 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:16:28 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/05/24 18:16:25 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/07/24 14:28:50 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include <stdarg.h>
 
-//what if % est le dernier char ?
 int	write_conversion(const char *format, va_list args)
 {
+	if (!(*format))
+		return (0);
 	if (*format == '%')
 		return (write(1, "%", 1));
 	if (*format == 'c')
@@ -32,7 +33,7 @@ int	write_conversion(const char *format, va_list args)
 		return (print_pointer(va_arg(args, unsigned long)));
 	if (*format == 'u')
 		return (print_unsigned(va_arg(args, unsigned int)));
-	return (0);
+	return (write(1, format, 1));
 }
 
 int	ft_printf(const char *format, ...)
@@ -53,7 +54,8 @@ int	ft_printf(const char *format, ...)
 			write(1, format, 1);
 			nb_char_written++;
 		}
-		format++;
+		if (*format)
+			format++;
 	}
 	va_end(args);
 	return (nb_char_written);
