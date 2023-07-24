@@ -64,4 +64,6 @@ int main(void)
 	printf("%d\n", printf("%kdaflkjhasldkfj\n"));
 	printf("%d\n", printf("ilosuayhdg%"));
 	fflush(stdout);
+	ft_printf("%d\n", ft_printf("%kdaflkjhasldkfj\n"));
+	ft_printf("%d\n", ft_printf("ilosuayhdg%"));
 }
