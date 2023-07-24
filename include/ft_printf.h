@@ -6,7 +6,7 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:23:41 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/05/24 18:14:24 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/07/24 15:11:58 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_strlen(char *str);
 int	putnbr_decimal(int nbr);
-int	ft_atoi(const char *nptr);
 int	print_pointer(unsigned long add_int);
 int	power(int nb, int pow);
 int	print_unsigned(unsigned int u_nb);
