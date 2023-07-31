@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_utils_pcu.c                                 :+:      :+:    :+:   */
+/*   printf_utils2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:48:06 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/07/17 12:08:58 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/07/28 16:26:44 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_putchar(char c)
 
 int	print_pointer(unsigned long add_int)
 {
-	char	addr[17];
+	char	addr[16];
 	int		i;
 	int		nb_char;
 
@@ -46,7 +46,7 @@ int	print_hex(unsigned long hex, char *base)
 	int				nb_char_written;
 	int				len_nb;
 	unsigned long	hexa;
-	char			res[20];
+	char			res[8];
 
 	len_nb = 0;
 	hexa = (unsigned int) hex;
@@ -59,7 +59,7 @@ int	print_hex(unsigned long hex, char *base)
 		len_nb++;
 	}
 	nb_char_written = len_nb;
-	while (len_nb < 20)
+	while (len_nb < 8)
 	{
 		res[len_nb] = '\0';
 		len_nb++;

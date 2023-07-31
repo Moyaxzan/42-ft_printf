@@ -14,10 +14,10 @@ AR_FLAGS	= -rcs
 
 RM_FLAGS	= -f
 
+all :		$(NAME)
+
 $(NAME) :	$(OBJS)
 			ar $(AR_FLAGS) $(NAME) $(OBJS)
-
-all :		$(NAME)
 
 %.o:		%.c
 			$(CC) $(CFLAGS) -c $< -o $@
